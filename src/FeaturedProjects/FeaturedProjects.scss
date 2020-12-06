@@ -1,0 +1,23 @@
+@import "../config";
+
+.featured_projects_outer {
+  background-color: #eee;
+  margin-top: -20px;
+  padding-top: 20px;
+  padding-bottom: 25px;
+
+  .featured_projects {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  }
+
+  h2 {
+    .view-all {
+      float: right;
+      margin-top: 5px;
+    }
+  }
+}

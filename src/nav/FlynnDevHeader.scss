@@ -1,0 +1,22 @@
+@import "../config";
+
+#brand {
+  font-family: "coquette",fantasy;
+  font-weight:bold;
+  color:$blue;
+  font-size: 24px;
+  &:hover {
+    color: $darker-blue;
+  }
+}
+
+.navbar-header {
+  float: left;
+}
+
+.navbar-default {
+  background-color: #f8f8f8;
+  border-color: #e7e7e7;
+  padding: 2px 1rem !important;
+  border-bottom-width: 1px;
+}
