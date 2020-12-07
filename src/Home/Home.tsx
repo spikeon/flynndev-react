@@ -33,6 +33,18 @@ export default class Home extends Component<HomeProps, State> {
         this.getSkills();
     }
 
+    private getProjects() {
+        this.projectService.retrieveItems().then(projects => {
+            this.setState({projects});
+        })
+    }
+
+    private getSkills() {
+        this.skillService.retrieveItems().then(skills => {
+            this.setState({skills});
+        })
+    }
+
     render() {
         return (
             <div className="Home">
@@ -40,16 +52,5 @@ export default class Home extends Component<HomeProps, State> {
                 <Skills skills={this.state.skills}/>
             </div>
         );
-    }
-
-    private getProjects() {
-        this.projectService.retrieveItems().then(projects => {
-            this.setState({projects});
-        })
-    }
-    private getSkills() {
-        this.skillService.retrieveItems().then(skills => {
-            this.setState({skills});
-        })
     }
 }
