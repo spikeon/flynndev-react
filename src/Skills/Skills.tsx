@@ -1,15 +1,16 @@
 import React, {Component} from 'react';
 import './Skills.scss';
 import {Container} from "react-bootstrap";
-import Skill, {SkillProps} from "./Skill";
+import Skill from "./Skill";
+import {SkillModel} from "../shared/SkillModel";
 
 type SkillsProps = {
-    skills?: SkillProps[]
+    skills?: SkillModel[]
 };
 
 export default class Skills extends Component<SkillsProps> {
 
-    sortByAgeDesc(a: SkillProps, b: SkillProps) {
+    sortByAgeDesc(a: SkillModel, b: SkillModel) {
         if (a.now > b.now) return -1;
         else if (a.now === b.now) return 0;
         else return 1;
@@ -20,14 +21,14 @@ export default class Skills extends Component<SkillsProps> {
 
         if (this.props.skills) {
             const skills = this.props.skills.slice();
-            let max = 20;
+            let max = 10;
 
             skills.forEach((skill) => {
                 if (skill.now + 2 > max) max = skill.now + 2;
             })
 
-            skillElements = skills.sort((a, b) => this.sortByAgeDesc(a, b)).map((skill: SkillProps) => (
-                <Skill now={skill.now} min={0} max={max} name={skill.name}/>
+            skillElements = skills.sort((a, b) => this.sortByAgeDesc(a, b)).map((skill: SkillModel) => (
+                <Skill now={skill.now} max={max} name={skill.name}/>
             ));
         }
 

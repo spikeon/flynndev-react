@@ -2,16 +2,16 @@ import React, {Component} from 'react';
 import './Home.scss';
 import FeaturedProjects from "../FeaturedProjects/FeaturedProjects";
 import Skills from "../Skills/Skills";
-import {SkillProps} from "../Skills/Skill";
-import {ProjectProps} from "../Project/Project";
 import ProjectService from "../shared/MockProjectService";
 import SkillService from "../shared/MockSkillsService";
+import {ProjectModel} from "../shared/ProjectModel";
+import {SkillModel} from "../shared/SkillModel";
 
 type HomeProps = {}
 
 type State = {
-    projects: ProjectProps[],
-    skills: SkillProps[]
+    projects: ProjectModel[],
+    skills: SkillModel[]
 }
 
 export default class Home extends Component<HomeProps, State> {

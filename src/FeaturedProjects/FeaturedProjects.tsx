@@ -2,10 +2,10 @@ import React, {Component} from 'react';
 import './FeaturedProjects.scss';
 import {Button, Container} from "react-bootstrap";
 import ProjectThumb from "../Project/ProjectThumb";
-import {ProjectProps} from "../Project/Project";
+import {ProjectModel} from "../shared/ProjectModel";
 
 type FeaturedProjectsProps = {
-    projects: ProjectProps[]
+    projects: ProjectModel[]
 }
 
 export default class FeaturedProjects extends Component<FeaturedProjectsProps> {

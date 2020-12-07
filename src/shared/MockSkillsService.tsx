@@ -1,8 +1,8 @@
-import {SkillProps} from "../Skills/Skill";
+import {SkillModel} from "./SkillModel";
 
 
 export default class SkillService {
-    private readonly items: SkillProps[];
+    private readonly items: SkillModel[];
 
     constructor() {
         this.items = [
