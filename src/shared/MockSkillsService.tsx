@@ -18,7 +18,6 @@ export default class SkillService {
             {name: "React",      now: 3},
             {name: "Bootstrap",  now: 7},
             {name: "WordPress",  now: 10},
-            {name: "PHP",        now: 18},
         ];
     }
 
