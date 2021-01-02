@@ -1,11 +1,12 @@
 import React from 'react';
 import "./Project.scss";
 import {RouteComponentProps} from 'react-router-dom';
-import {Button, Container, Tab, Tabs} from "react-bootstrap";
+import {Button, Container, Jumbotron, Tab, Tabs} from "react-bootstrap";
 import {ProjectModel} from "../shared/ProjectModel";
 import ProjectThumb from "./ProjectThumb";
 import ProjectService from "../shared/ProjectService";
 import parse from "html-react-parser";
+import {Gallery} from "./Gallery";
 
 type ProjectProps = { name: string }
 
@@ -39,7 +40,7 @@ export default class Project extends React.Component<RouteComponentProps<Project
 
     private getExternalLink(href: string | undefined | null, text: JSX.Element | string): string | JSX.Element {
         if (!href) return "";
-        return <a target="_blank" rel="noreferrer" href={href}>{text}</a>
+        return <a target="_blank" rel="noreferrer" href={href} key={href}>{text}</a>
     }
 
     private getExternalButton(href: string | undefined | null, text: JSX.Element | string): string | JSX.Element {
@@ -66,29 +67,41 @@ export default class Project extends React.Component<RouteComponentProps<Project
             if(!show) return "";
             if(defaultActive === "") defaultActive = key;
 
-            return <Tab eventKey={key} title={title}>
-                <h2>{title}</h2>
+            return <Tab eventKey={key} title={title} key={key} className={key}>
+                <h2 className="tab_title">{title}</h2>
                 {content}
             </Tab>
         }
 
         const tabs = [
-            makeTab("about", "About", project.about !== "", project.about ? parse(project.about) : ""),
-            makeTab("readme", "Readme", project.about !== "", project.readme ? parse(project.readme) : ""),
+            makeTab("about", "About", project.about !== "", project.about ? parse(project.about, { trim: true }) : ""),
+            makeTab("readme", "Readme", project.readme !== "", project.readme ? parse(project.readme, { trim: true }) : ""),
             makeTab("files", "Files", project.files.length > 0, <p>File Viewer coming soon</p>),
         ];
 
-        return (
+        let jumbotron : JSX.Element | string = "";
+        if(project.gallery.length > 0) {
+            jumbotron = <Jumbotron>
+                <Container>
+                    <Gallery images={project.gallery}></Gallery>
+                </Container>
+            </Jumbotron>;
+        }
+
+        return ([
             <Container>
                 <div className="project_header">
                     {thumb}
                     {title}
                     {links}
                 </div>
+            </Container>,
+            jumbotron,
+            <Container>
                 <Tabs defaultActiveKey={defaultActive}>
                     {tabs}
                 </Tabs>
             </Container>
-        );
+        ]);
     }
 }

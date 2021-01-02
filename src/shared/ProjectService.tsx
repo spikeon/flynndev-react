@@ -2,9 +2,6 @@ export default class ProjectService {
 
     url = "http://api.flynndev.us";
 
-    constructor() {
-    }
-
     async retrieveItems() {
         return fetch(`${this.url}/projects/all`)
             .then(response => response.json());

@@ -28,7 +28,7 @@ export default class Skills extends Component<SkillsProps> {
             })
 
             skillElements = skills.sort((a, b) => this.sortByAgeDesc(a, b)).map((skill: SkillModel) => (
-                <Skill now={skill.now} max={max} name={skill.name}/>
+                <Skill now={skill.now} max={max} name={skill.name} key={skill.name}/>
             ));
         }
 
