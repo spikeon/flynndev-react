@@ -9,12 +9,16 @@ import Analytics from 'react-router-ga';
 import {Route, BrowserRouter as Router, Switch} from 'react-router-dom';
 import config from "./config";
 import FlynnDevHeader from "./nav/FlynnDevHeader";
+import Projects from "./Projects/Projects";
+import Project from "./Project/Project";
 
 const App = () => (
     <Router>
         <Analytics id={config.GA_TRACKING_ID}>
             <FlynnDevHeader />
             <Switch>
+                <Route path="/projects" component={Projects} />
+                <Route path="/project/:name" component={Project} />
                 <Route path="/" component={Home} />
             </Switch>
         </Analytics>
