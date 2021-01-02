@@ -1,0 +1,15 @@
+.project_header {
+  display: flex;
+  align-items: center;
+  h2 {
+    margin-left: 20px;
+    margin-right:auto;
+  }
+  a {
+    margin-left: 10px;
+  }
+}
+
+.about, .readme {
+  white-space: pre-line;
+}

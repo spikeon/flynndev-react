@@ -16,7 +16,7 @@ export default function FeaturedProjects(props: FeaturedProjectsProps) {
     if (props.projects) {
         const projects = props.projects.slice();
         featuredProjectThumbElements = projects.filter(project => project.featured).map((project) => (
-            <ProjectThumb src={project.thumb} name={project.name} id={project.id} />
+            <ProjectThumb size={120} src={project.thumb} name={project.name} id={project.id} />
         ));
     }
 

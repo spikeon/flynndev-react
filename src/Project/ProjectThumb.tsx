@@ -16,7 +16,7 @@ export const ProjectThumb = ({id, name, src, size}: ProjectThumbProps) => {
 
     const thumb = `${src}/${size ? size : 200}`;
 
-    return <div className="project_thumb" onClick={navigate}>
+    return <div className={`project_thumb size-${size}`} onClick={navigate}>
         <img alt="placeholder" src={thumb}/>
         <div className="title">
             <p>{name}</p>

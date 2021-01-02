@@ -2,5 +2,9 @@
 
 .project_thumb {
   margin: 10px;
-  @include circle-image(200px);
+  @for $i from 1 through 50 {
+    $value: ($i - 1) * 10 + 1;
+    @include circle-image();
+  }
 }
+

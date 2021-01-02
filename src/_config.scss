@@ -16,9 +16,7 @@ $red : #a94442;
   }
 }
 
-@mixin circle-image($size){
-  width: $size;
-  height: $size;
+@mixin circle-image(){
   border-radius: 50%;
   border: 3px solid #ccc;
   position: relative;
@@ -36,7 +34,7 @@ $red : #a94442;
     justify-content: center;
     display: none;
     p {
-      font-size: 24px;
+      font-size: calc((24px / 200) * 100%);
       font-weight: bold;
       margin: 0;
       text-align:center;
