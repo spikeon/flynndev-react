@@ -49,7 +49,7 @@ function arrangeIntoTree(paths: ProjectFileModel[]): TreeFileType[] {
                 currentLevel = existingPath.children;
             } else {
                 const newPart = new TreeFile(part, parts.join("/"));
-                if (path.endsWith("/" + part)) newPart.file = file;
+                if (path.endsWith("/" + part) || path === part) newPart.file = file;
 
                 currentLevel.push(newPart);
                 currentLevel = newPart.children;

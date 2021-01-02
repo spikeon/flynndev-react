@@ -49,3 +49,12 @@
     font-size: 1.1em;
   }
 }
+
+.hide_tabs {
+  .nav-tabs {
+    display: none;
+  }
+  .tab_title {
+    display: none;
+  }
+}

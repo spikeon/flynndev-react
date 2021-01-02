@@ -63,23 +63,21 @@ export default class Project extends React.Component<RouteComponentProps<Project
         ];
 
         let defaultActive = "";
+        const tabs : JSX.Element[] = [];
 
         const makeTab = (key : string, title : string, show: boolean, content: JSX.Element[] | JSX.Element | string) => {
             if(!show) return "";
             if(defaultActive === "") defaultActive = key;
 
-            return <Tab eventKey={key} title={title} key={key} className={key}>
+            tabs.push(<Tab eventKey={key} title={title} key={key} className={key}>
                 <h2 className="tab_title">{title}</h2>
                 {content}
-            </Tab>
+            </Tab>);
         }
 
-        console.log(project);
+        makeTab("about", "About", project.about !== "", project.about ? parse(project.about, { trim: true }) : "");
+        makeTab("readme", "Readme", project.readme !== "", project.readme ? parse(project.readme, { trim: true }) : "");
 
-        const tabs = [
-            makeTab("about", "About", project.about !== "", project.about ? parse(project.about, { trim: true }) : ""),
-            makeTab("readme", "Readme", project.readme !== "", project.readme ? parse(project.readme, { trim: true }) : ""),
-        ];
 
         let jumbotron : JSX.Element | string = "";
         if(project.gallery.length > 0) {
@@ -111,9 +109,11 @@ export default class Project extends React.Component<RouteComponentProps<Project
             </Container>,
             jumbotron,
             <Container>
-                <Tabs defaultActiveKey={defaultActive}>
-                    {tabs}
-                </Tabs>
+                <div className={tabs.length == 1 ? "hide_tabs" : ""}>
+                    <Tabs defaultActiveKey={defaultActive}>
+                        {tabs}
+                    </Tabs>
+                </div>
             </Container>,
             files
         ]);
