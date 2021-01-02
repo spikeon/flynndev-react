@@ -9,15 +9,15 @@ type ProjectThumbProps = {
     size?: number
 };
 
-export const ProjectThumb = ({id, name, src, size}: ProjectThumbProps) => {
+export const ProjectThumb = ({id, name, src, size = 200}: ProjectThumbProps) => {
 
     const history = useHistory();
     const navigate = () => history.push(`/project/${id}`);
 
-    const thumb = `${src}/${size ? size : 200}`;
+    const thumb = src !== "" ? <img alt="placeholder" src={`${src}/${size}`}/> : "";
 
-    return <div className={`project_thumb size-${size}`} onClick={navigate}>
-        <img alt="placeholder" src={thumb}/>
+    return <div className={`project_thumb size-${size}`} style={ {height:size, width: size} } onClick={navigate}>
+        {thumb}
         <div className="title">
             <p>{name}</p>
         </div>

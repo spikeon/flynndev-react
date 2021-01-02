@@ -52,7 +52,7 @@ export default class Project extends React.Component<RouteComponentProps<Project
         if (this.state.project === null) return (<Container><h1>404: Project not found</h1></Container>);
         const project = this.state.project;
 
-        const thumb = <ProjectThumb size={100} src={project.thumb} name={project.name} id={project.id}/>;
+        const thumb = project.thumb !== "" ? <ProjectThumb size={100} src={project.thumb} name={project.name} id={project.id}/> : "";
         const title = <h2>{project.name}</h2>;
         const links = [
             this.getExternalButton(project.github,    "GitHub"),
@@ -89,7 +89,7 @@ export default class Project extends React.Component<RouteComponentProps<Project
         }
 
         let files : string | JSX.Element = "";
-        if(project.files.length > 0){
+        if(project.files.length > 1){
             files =
                 <Jumbotron>
                     <Container>
