@@ -1,4 +1,5 @@
 import React from "react";
+import "./Gallery.scss";
 
 type Props = {
     images: string[]
@@ -23,8 +24,8 @@ export class Gallery extends React.Component<Props, State> {
         let thumbs : JSX.Element[] = [];
 
         for(let img of this.props.images){
-            thumbs.push(<div className="gallery-item project-gallery-thumb" onClick={() => {this.setState({img})}}>
-                <img src={`${img}/100`} />
+            thumbs.push(<div className="gallery-item project-gallery-thumb" onClick={() => {this.setState({img})}} key={img}>
+                <img src={`${img}/100`} alt="" />
             </div>);
         }
 
@@ -37,7 +38,7 @@ export class Gallery extends React.Component<Props, State> {
         return (
             <div className="gallery">
                 <div className="gallery-current">
-                    <img src={currentImg}/>
+                    <img src={currentImg} alt=""/>
                 </div>
                 {thumbContainer}
             </div>

@@ -1,0 +1,53 @@
+@import "../_config.scss";
+
+$height: 700px;
+
+.file_tree {
+  max-height: $height;
+  overflow: auto;
+
+  .file_tree_item {
+    &.selected > .title{
+      color: $blue;
+    }
+
+    .title {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      cursor: pointer;
+      svg {
+        margin-right: 10px;
+      }
+    }
+
+    .file_tree {
+      max-height: inherit;
+      padding-left: 10px;
+      margin-left: 10px;
+      border-left: 1px dashed #ccc;
+
+      .file_tree_item {
+      }
+    }
+  }
+}
+
+.files {
+  h5 {
+    font-family: "serenity", sans-serif;
+    margin-bottom: 20px;
+    font-weight: bold;
+    padding: 10px;
+    line-height: 16px;
+    border-radius: 4px;
+    background-color: #2b2b2b;
+    border-color: #3b3b3b;
+    color: #fff;
+  }
+
+  pre {
+    height: calc(#{$height} - 40px - 16px);
+    overflow: auto;
+  }
+}

@@ -6,7 +6,8 @@ import {ProjectModel} from "../shared/ProjectModel";
 import ProjectThumb from "./ProjectThumb";
 import ProjectService from "../shared/ProjectService";
 import parse from "html-react-parser";
-import {Gallery} from "./Gallery";
+import {Gallery} from "../Gallery/Gallery";
+import {FileViewer} from "../FileViewer/FileViewer";
 
 type ProjectProps = { name: string }
 
@@ -73,19 +74,31 @@ export default class Project extends React.Component<RouteComponentProps<Project
             </Tab>
         }
 
+        console.log(project);
+
         const tabs = [
             makeTab("about", "About", project.about !== "", project.about ? parse(project.about, { trim: true }) : ""),
             makeTab("readme", "Readme", project.readme !== "", project.readme ? parse(project.readme, { trim: true }) : ""),
-            makeTab("files", "Files", project.files.length > 0, <p>File Viewer coming soon</p>),
         ];
 
         let jumbotron : JSX.Element | string = "";
         if(project.gallery.length > 0) {
             jumbotron = <Jumbotron>
                 <Container>
-                    <Gallery images={project.gallery}></Gallery>
+                    <Gallery images={project.gallery}/>
                 </Container>
             </Jumbotron>;
+        }
+
+        let files : string | JSX.Element = "";
+        if(project.files.length > 0){
+            files =
+                <Jumbotron>
+                    <Container>
+                        <h2>Files</h2>
+                        <FileViewer files={project.files}/>
+                    </Container>
+                </Jumbotron>;
         }
 
         return ([
@@ -101,7 +114,8 @@ export default class Project extends React.Component<RouteComponentProps<Project
                 <Tabs defaultActiveKey={defaultActive}>
                     {tabs}
                 </Tabs>
-            </Container>
+            </Container>,
+            files
         ]);
     }
 }
