@@ -49,7 +49,7 @@ export default class Project extends React.Component<RouteComponentProps<Project
     }
 
     render() {
-        if (this.state.project === null) return (<Container><h1>404: Project not found</h1></Container>);
+        if (this.state.project === null) return (<Container></Container>);
         const project = this.state.project;
 
         const thumb = project.thumb !== "" ? <ProjectThumb size={100} src={project.thumb} name={project.name} id={project.id}/> : "";
