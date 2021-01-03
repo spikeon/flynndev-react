@@ -10,7 +10,7 @@ import ResumeService from "../shared/MockResumeService";
 import {JobModel} from "../shared/JobModel";
 import me from "../img/me.png";
 import {Col, Container, Jumbotron, Row} from "react-bootstrap";
-import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
+import {faBuilding, faEnvelope, faHome, faUser} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Resume from "../Resume/Resume";
 
@@ -68,17 +68,29 @@ export default class Home extends Component<HomeProps, State> {
             <div className="Home">
                 <FeaturedProjects projects={this.state.projects}/>
                 <Container>
-                    <Skills skills={this.state.skills}/>
+                    <div className="mission">
+                        <h2>Career Objectives and Mission Statement</h2>
+                        <p>I have always had a natural talent for writing code. I would like to use this natural talent to the benefit of both myself and my employer, while continuing to hone my skills and learn new things about software development. My best fit would be in a well-structured organization that has high development standards. Eventually, I see myself working as a senior level Software Engineer or in a programming/architecture role.</p>
+                    </div>
                 </Container>
                 <Jumbotron>
                     <Container>
                         <Row>
                             <Col md={2}>
-                                <img src={me} alt="Mike Flynn" width="100%" />
                                 <div className="info">
-                                    <div className="name">Mike Flynn</div>
-                                    <div className="job">Software Engineer</div>
-                                    <div className="location">Orcutt, CA</div>
+                                    <img src={me} alt="Mike Flynn" width="100%" />
+                                    <div className="name">
+                                        <FontAwesomeIcon icon={faUser} />
+                                        Mike Flynn
+                                    </div>
+                                    <div className="job">
+                                        <FontAwesomeIcon icon={faBuilding} />
+                                        Software Engineer
+                                    </div>
+                                    <div className="location">
+                                        <FontAwesomeIcon icon={faHome} />
+                                        Orcutt, CA
+                                    </div>
                                     <div className="contact">
                                         <a href="mailto:mflynn@flynndev.us">
                                             <FontAwesomeIcon icon={faEnvelope} />
@@ -88,15 +100,51 @@ export default class Home extends Component<HomeProps, State> {
 
                                 </div>
                             </Col>
-                            <Col md={10}>
-                                <h2>Career Objectives and Mission Statement</h2>
-                                <p>I have always had a natural talent for writing code. I would like to use this natural talent to the benefit of both myself and my employer, while continuing to hone my skills and learn new things about software development. My best fit would be in a well-structured organization that has high development standards. Eventually, I see myself working as a senior level Software Engineer or in a programming/architecture role.</p>
+                            <Col md={6}>
+                                <h3>Education</h3>
+                                <div className="school">
+                                    <div className="name">Allan Hancock College</div>
+                                    <div className="location">Santa Maria, CA</div>
+                                    <div className="degree">Associates of Arts in Computer Science</div>
+                                    <h4>Accolades</h4>
+                                    <ul>
+                                        <li>Online Coordinator for the Science and Engineering Club for 2 years</li>
+                                        <li>Member of Alpha Gamma Sigma (Honors Society)</li>
+                                    </ul>
+                                </div>
+
+                                <h3>Certifications</h3>
+                                <ul>
+                                    <li>Certified Vaadin 14 Developer</li>
+                                </ul>
+                            </Col>
+                            <Col md={4}>
+                                <h3>Links</h3>
+                                <ul>
+                                    <li>
+                                        <a href="https://linkedin.com/in/spikeon">
+                                            LinkedIn
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://stackoverflow.com/users/3347093/spikeon">
+                                            Stack Overflow
+                                        </a>
+                                    </li>
+                                </ul>
                             </Col>
                         </Row>
                     </Container>
                 </Jumbotron>
                 <Container>
-                    <Resume resume={this.state.resume}></Resume>
+                    <Row>
+                        <Col md={8}>
+                            <Resume resume={this.state.resume}/>
+                        </Col>
+                        <Col md={4}>
+                            <Skills skills={this.state.skills}/>
+                        </Col>
+                    </Row>
                 </Container>
             </div>
         );

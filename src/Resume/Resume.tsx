@@ -12,11 +12,11 @@ export default function Resume(props: Props) {
     let jobs: JSX.Element[] = [];
 
     for(let job of props.resume){
-        jobs.push(<Job job={job} />)
+        jobs.push(<Job key={job.company.name} job={job} />)
     }
 
     return (
-        <div className="Resume">
+        <div className="resume">
             {jobs}
         </div>
     );

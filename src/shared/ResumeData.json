@@ -22,13 +22,61 @@
     ]
   },
   {
-    "position" : "",
-    "start_date" : "",
-    "end_date" : "",
+    "position" : "Full Stack Web Developer",
+    "start_date" : "12/2015",
+    "end_date" : "09/2016",
     "company" : {
-      "name" : "",
-      "city" : "",
-      "state" : ""
+      "name" : "5 Pints Productions",
+      "city" : "Phoenix",
+      "state" : "AZ"
+    },
+    "duties" : [
+      "Architected and designed custom Web Based applications for clients after meeting with them to determine what their needs were using PHP, MySQL, HTML5, CSS3, and JavaScript (jQuery)",
+      "Updated and maintained existing Web Sites and Web Applications using PHP, MySQL, WordPress, HTML5, CSS3, and JavaScript(jQuery)",
+      "Translation of Designer created Photoshop files into handwritten WordPress templates, using: HTML5, CSS3, PHP, WordPress Themes and JavaScript"
+    ],
+    "accomplishments" : []
+  },
+  {
+    "position" : "Lead UI Developer & Shareholder",
+    "start_date" : "05/2012",
+    "end_date" : "02/2016",
+    "company" : {
+      "name" : "ClearCode Partners LLC",
+      "city" : "Portland",
+      "state" : "ME"
+    },
+    "duties" : [
+      "Architected and designed custom Web Based applications for clients after meeting with them to determine what their needs were using PHP, MySQL, HTML5, CSS3, and JavaScript (jQuery)",
+      "Updated and maintained existing Web Sites and Web Applications using PHP, MySQL, WordPress, HTML5, CSS3, and JavaScript(jQuery)",
+      "Translation of Designer created Photoshop files into handwritten WordPress templates, using: HTML5, CSS3, PHP, WordPress Themes and JavaScript"
+    ],
+    "accomplishments" : []
+  },
+  {
+    "position" : "Full Stack LAMP Developer - Remote",
+    "start_date" : "01/2019",
+    "end_date" : "12/2012",
+    "company" : {
+      "name" : "eMedia Studios",
+      "city" : "Gold Coast",
+      "state" : "Australia"
+    },
+    "duties" : [
+      "Architected and designed custom Web Based applications for clients after meeting with them to determine what their needs were using PHP, MySQL, HTML5, CSS3, and JavaScript (jQuery)",
+      "Updated and maintained existing Web Sites and Web Applications using PHP, MySQL, WordPress, HTML5, CSS3, and JavaScript(jQuery)",
+      "Translation of Designer created Photoshop files into handwritten WordPress templates, using: HTML5, CSS3, PHP, WordPress Themes and JavaScript"
+    ],
+    "accomplishments" : []
+  },
+  {
+    "position" : "Full Stack Web Developer",
+    "start_date" : "06/2006",
+    "end_date" : "02/2016",
+    "company" : {
+      "name" : "Freelance",
+      "city" : "Auburn",
+      "state" : "ME"
     },
     "duties" : [],
     "accomplishments" : []
