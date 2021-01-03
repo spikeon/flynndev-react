@@ -34,12 +34,10 @@ export default class Skills extends Component<SkillsProps> {
 
         return (
             <div className="skills_outer">
-                <Container>
-                    <h2>My Skills</h2>
-                    <div className="skills">
-                        {skillElements}
-                    </div>
-                </Container>
+                <h2>My Skills</h2>
+                <div className="skills">
+                    {skillElements}
+                </div>
             </div>
         );
     }

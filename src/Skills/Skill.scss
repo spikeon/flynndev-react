@@ -1,10 +1,15 @@
-.skill_title {
-  margin-top: 20px;
-  display: flex;
-  font-size: 14px;
-
-  .skill_years {
-    margin-left: auto;
+.skill {
+  &:last-of-type {
+    margin-bottom: 20px;
+  }
+  .skill_title {
+    margin-top: 20px;
+    display: flex;
     font-size: 14px;
+
+    .skill_years {
+      margin-left: auto;
+      font-size: 14px;
+    }
   }
 }
