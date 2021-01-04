@@ -37,6 +37,7 @@ export default class Home extends Component<HomeProps, State> {
             skills: [],
             resume: []
         }
+
     }
 
     componentDidMount() {
@@ -101,7 +102,9 @@ export default class Home extends Component<HomeProps, State> {
                                 </div>
                             </Col>
                             <Col md={6}>
+
                                 <h3>Education</h3>
+
                                 <div className="school">
                                     <div className="name">Allan Hancock College</div>
                                     <div className="location">Santa Maria, CA</div>
@@ -114,8 +117,14 @@ export default class Home extends Component<HomeProps, State> {
                                 </div>
 
                                 <h3>Certifications</h3>
+
                                 <ul>
                                     <li>Certified Vaadin 14 Developer</li>
+                                    <li>LinkedIn Assessment: MySQL</li>
+                                    <li>LinkedIn Assessment: Javascript</li>
+                                    <li>LinkedIn Assessment: CSS</li>
+                                    <li>LinkedIn Assessment: HTML</li>
+                                    <li>LinkedIn Assessment: Java</li>
                                 </ul>
                             </Col>
                             <Col md={4}>
@@ -129,6 +138,11 @@ export default class Home extends Component<HomeProps, State> {
                                     <li>
                                         <a href="https://stackoverflow.com/users/3347093/spikeon">
                                             Stack Overflow
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://github.com/spikeon">
+                                            GitHub
                                         </a>
                                     </li>
                                 </ul>

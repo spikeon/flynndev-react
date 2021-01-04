@@ -1,5 +1,6 @@
 import React from "react";
 import {JobModel} from "../shared/JobModel";
+import {Col, Row} from "react-bootstrap";
 
 type Props = { job: JobModel };
 
@@ -18,7 +19,7 @@ export class Job extends React.Component<Props> {
             }
 
             duties = <div className="duties">
-                <h3>Duties</h3>
+                <h4>Duties</h4>
                 <ul>
                     {dutyItems}
                 </ul>
@@ -33,7 +34,7 @@ export class Job extends React.Component<Props> {
             }
 
             accomplishments = <div className="accomplishments">
-                <h3>Accomplishments</h3>
+                <h4>Accomplishments</h4>
                 <ul>
                     {accomplishmentItems}
                 </ul>
@@ -43,18 +44,30 @@ export class Job extends React.Component<Props> {
 
         return (
             <div className="job">
-                <div className="company_name">
-                    {job.company.name}
-                </div>
-                <div className="position">
-                    {job.position}
-                </div>
-                <div className="tenure">
-                    {job.start_date} - {job.end_date}
-                </div>
-                <div className="location">
-                    {job.company.city}, {job.company.state}
-                </div>
+                <Row>
+                    <Col md={6}>
+                        <div className="company_name">
+                            {job.company.name}
+                        </div>
+                    </Col>
+                    <Col md={6}>
+                        <div className="position">
+                            {job.position}
+                        </div>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col md={6}>
+                        <div className="tenure">
+                            {job.start_date} - {job.end_date}
+                        </div>
+                    </Col>
+                    <Col md={6}>
+                        <div className="location">
+                            {job.company.city}, {job.company.state}
+                        </div>
+                    </Col>
+                </Row>
                 {duties}
                 {accomplishments}
             </div>
