@@ -48,5 +48,8 @@
     border-top: 2px dashed #ccc;
     padding-top: 20px;
     margin-top: 20px;
+    &:first-of-type {
+      margin-top: 0;
+    }
   }
 }
