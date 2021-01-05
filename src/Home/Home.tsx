@@ -156,13 +156,11 @@ export default class Home extends Component<HomeProps, State> {
                 <Jumbotron>
                     <Container>
                         <Row>
-                            <Col md={2}>
+                            <Col md={3}>
                                 <Info/>
                             </Col>
-                            <Col md={6}>
+                            <Col md={9}>
                                 <Education/>
-                            </Col>
-                            <Col md={4}>
                                 <Certifications/>
                                 <Links links={links}/>
                             </Col>
