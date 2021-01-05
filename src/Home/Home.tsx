@@ -13,6 +13,8 @@ import {Col, Container, Jumbotron, Row} from "react-bootstrap";
 import {faBuilding, faEnvelope, faHome, faUser} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Resume from "../Resume/Resume";
+import ResumeLink from "../Resume/ResumeLink";
+import ResumeLinks from '../Resume/ResumeLinks';
 
 type HomeProps = {}
 
@@ -65,6 +67,14 @@ export default class Home extends Component<HomeProps, State> {
     }
 
     render() {
+
+        let links = [
+            { href:"https://www.hackerrank.com/spikeon", text:"Hacker Rank"},
+            { href:"https://linkedin.com/in/spikeon", text:"LinkedIn"},
+            { href:"https://stackoverflow.com/users/3347093/spikeon", text:"Stack Overflow"},
+            { href:"https://github.com/spikeon", text:"GitHub"}
+        ];
+
         return (
             <div className="Home">
                 <FeaturedProjects projects={this.state.projects}/>
@@ -129,23 +139,7 @@ export default class Home extends Component<HomeProps, State> {
                             </Col>
                             <Col md={4}>
                                 <h3>Links</h3>
-                                <ul>
-                                    <li>
-                                        <a href="https://linkedin.com/in/spikeon">
-                                            LinkedIn
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://stackoverflow.com/users/3347093/spikeon">
-                                            Stack Overflow
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://github.com/spikeon">
-                                            GitHub
-                                        </a>
-                                    </li>
-                                </ul>
+                                <ResumeLinks links={links}/>
                             </Col>
                         </Row>
                     </Container>
