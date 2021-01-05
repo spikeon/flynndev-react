@@ -3,7 +3,7 @@ export default class ProjectService {
     url = "http://api.flynndev.us";
 
     async retrieveItems() {
-        return fetch(`${this.url}/projects/all`)
+        return fetch(`${this.url}/projects/`)
             .then(response => response.json());
     }
 
