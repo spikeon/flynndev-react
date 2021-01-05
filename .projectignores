@@ -3,5 +3,5 @@ api_config.js
 *.psd
 api
 build
-.eslinkcache
+.eslintcache
 package-lock.json
