@@ -2,7 +2,7 @@
   "name": "flynndev2",
   "version": "2.0.0",
   "private": true,
-  "description": "Flynndev",
+  "description": "Flynndev - Frontend",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
@@ -58,6 +58,7 @@
     "@types/react-syntax-highlighter": "^13.5.0"
   },
   "liveurl": "http://flynndev.us",
+  "github" : "https://github.com/spikeon/flynndev-react",
   "featured": true,
   "unrestrictedfiles": true,
   "tags": [
