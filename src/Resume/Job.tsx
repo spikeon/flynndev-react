@@ -46,9 +46,9 @@ export class Job extends React.Component<Props> {
             <div className="job">
                 <Row>
                     <Col md={6}>
-                        <div className="company_name">
+                        <h3 className="company_name">
                             {job.company.name}
-                        </div>
+                        </h3>
                     </Col>
                     <Col md={6}>
                         <div className="position">
