@@ -58,7 +58,7 @@
     "@types/react-syntax-highlighter": "^13.5.0"
   },
   "liveurl": "http://flynndev.us",
-  "github" : "https://github.com/spikeon/flynndev-react",
+  "githuburl" : "https://github.com/spikeon/flynndev-react",
   "featured": true,
   "unrestrictedfiles": true,
   "tags": [

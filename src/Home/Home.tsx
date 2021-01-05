@@ -54,7 +54,7 @@ function Education() {
         <h3>Education</h3>
 
         <div className="school">
-            <h3 className="name">Allan Hancock College</h3>
+            <h4 className="name">Allan Hancock College</h4>
             <div className="location">Santa Maria, CA</div>
             <div className="degree">Associates of Arts in Computer Science</div>
             <div className="accolades">
@@ -160,9 +160,11 @@ export default class Home extends Component<HomeProps, State> {
                                 <Info/>
                             </Col>
                             <Col md={9}>
-                                <Education/>
-                                <Certifications/>
-                                <Links links={links}/>
+                                <div className="achievements">
+                                    <Education/>
+                                    <Certifications/>
+                                    <Links links={links}/>
+                                </div>
                             </Col>
                         </Row>
                     </Container>
