@@ -1,0 +1,34 @@
+.education {
+  .school {
+    display: flex;
+    flex-wrap: wrap;
+
+    .name {
+      flex-basis: 50%;
+    }
+
+    .location {
+      flex-basis: 50%;
+      text-align: right;
+    }
+
+    .degree {
+      flex-basis: 100%;
+
+    }
+
+    .accolades {
+      flex-basis: 100%;
+      margin-top: 20px;
+
+      h4 {
+
+      }
+
+      ul {
+        li {
+        }
+      }
+    }
+  }
+}
