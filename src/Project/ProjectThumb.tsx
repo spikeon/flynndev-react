@@ -16,12 +16,14 @@ export const ProjectThumb = ({id, name, src, size = 200}: ProjectThumbProps) => 
 
     const thumb = src !== "" ? <img alt="placeholder" src={`${src}/${size}`}/> : "";
 
-    return <div className={`project_thumb size-${size} ${thumb === "" ? "no_thumb" : ""}`} style={ {height:size, width: size} } onClick={navigate}>
-        {thumb}
-        <div className="title">
-            <p>{name}</p>
+    return (
+        <div className={`project_thumb size-${size} ${thumb === "" ? "no_thumb" : ""}`} style={{height: size, width: size}} onClick={navigate}>
+            {thumb}
+            <div className="title">
+                <p>{name}</p>
+            </div>
         </div>
-    </div>
+    );
 }
 
 export default ProjectThumb;

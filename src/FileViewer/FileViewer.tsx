@@ -63,7 +63,7 @@ function arrangeIntoTree(paths: ProjectFileModel[]): TreeFileType[] {
 class FileTreeItem extends React.Component<{ file: TreeFileType, selected: ProjectFileModel, onSelect: any }> {
     render() {
         let file = this.props.file;
-        let icon = file.file === null ? <FontAwesomeIcon icon={faFolder}/> : <FontAwesomeIcon icon={faFile}/>;
+        let icon = file.file === null ? <FontAwesomeIcon icon={faFolder}/> : <FontAwesomeIcon icon={faFile} />;
         let isSelected = file.file === this.props.selected;
         let className = `file_tree_item ${isSelected ? "selected" : ""}`;
 
@@ -74,7 +74,7 @@ class FileTreeItem extends React.Component<{ file: TreeFileType, selected: Proje
         return (
             <div className={className} onClick={onClick}>
                 <div className="title">{icon} {file.name}</div>
-                <FileTree selected={this.props.selected} data={file.children} onSelect={this.props.onSelect}/>
+                <FileTree selected={this.props.selected} data={file.children} onSelect={this.props.onSelect} />
             </div>
         );
     }
@@ -85,7 +85,7 @@ class FileTree extends React.Component<{ selected: ProjectFileModel, data: TreeF
         let items = [];
         for (const file of this.props.data) {
             items.push(
-                <FileTreeItem file={file} selected={this.props.selected} onSelect={this.props.onSelect} key={file.id}/>
+                <FileTreeItem file={file} selected={this.props.selected} onSelect={this.props.onSelect} key={file.id} />
             );
         }
         return (

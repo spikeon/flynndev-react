@@ -15,8 +15,7 @@ export default class Skill extends Component<SkillModel> {
                     {this.props.name}
                     <span className="skill_years">{this.props.now} Years</span>
                 </h4>
-                <ProgressBar min={0} now={this.props.now} max={this.props.max} striped={true}
-                             variant="danger"/>
+                <ProgressBar min={0} now={this.props.now} max={this.props.max} striped={true} variant="danger"/>
             </div>
         );
     }

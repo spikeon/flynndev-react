@@ -7,7 +7,7 @@ $height: 700px;
   overflow: auto;
 
   .file_tree_item {
-    &.selected > .title{
+    &.selected > .title {
       color: $blue;
     }
 
@@ -16,6 +16,7 @@ $height: 700px;
       overflow: hidden;
       text-overflow: ellipsis;
       cursor: pointer;
+
       svg {
         margin-right: 10px;
       }

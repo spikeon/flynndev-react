@@ -14,19 +14,24 @@ type Props = {
 export function Info(props: Props) {
 
     return <div className="info">
+
         <img src={me} alt="Mike Flynn" width="100%"/>
+
         <div className="name">
             <FontAwesomeIcon icon={faUser}/>
             {props.name}
         </div>
+
         <div className="job">
             <FontAwesomeIcon icon={faBuilding}/>
             {props.jobTitle}
         </div>
+
         <div className="location">
             <FontAwesomeIcon icon={faHome}/>
             {props.location}
         </div>
+
         <div className="contact">
             <a href={`mailto:${props.email}`}>
                 <FontAwesomeIcon icon={faEnvelope}/>

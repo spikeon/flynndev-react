@@ -25,17 +25,11 @@ class Projects extends React.Component<Props, State> {
         this.getProjects();
     }
 
-    private getProjects() {
-        this.projectService.retrieveItems().then(projects => {
-            this.setState({projects});
-        })
-    }
-
     render() {
 
-        let projects : JSX.Element[] = [];
-        for(const project of this.state.projects){
-            projects.push(<ProjectThumb id={project.id} name={project.name} key={project.id} src={project.thumb} size={150} />);
+        let projects: JSX.Element[] = [];
+        for (const project of this.state.projects) {
+            projects.push(<ProjectThumb id={project.id} name={project.name} key={project.id} src={project.thumb} size={150}/>);
         }
 
         return (
@@ -44,8 +38,14 @@ class Projects extends React.Component<Props, State> {
                     {projects}
                 </div>
             </Container>
-       );
+        );
 
+    }
+
+    private getProjects() {
+        this.projectService.retrieveItems().then(projects => {
+            this.setState({projects});
+        })
     }
 }
 

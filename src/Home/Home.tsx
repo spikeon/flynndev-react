@@ -48,24 +48,6 @@ export default class Home extends Component<HomeProps, State> {
         this.getResume();
     }
 
-    private getProjects() {
-        this.projectService.retrieveItems().then(projects => {
-            this.setState({projects});
-        })
-    }
-
-    private getSkills() {
-        this.skillService.retrieveItems().then(skills => {
-            this.setState({skills});
-        })
-    }
-
-    private getResume() {
-        this.resumeService.retrieveItems().then(resume => {
-            this.setState({resume});
-        })
-    }
-
     render() {
 
         let links = [
@@ -85,7 +67,7 @@ export default class Home extends Component<HomeProps, State> {
                     <Container>
                         <Row>
                             <Col md={3}>
-                                <Info name = "Mike Flynn" jobTitle = "Software Engineer" location = "Orcutt, CA" email = "mflynn@flynndev.us"/>
+                                <Info name="Mike Flynn" jobTitle="Software Engineer" location="Orcutt, CA" email="mflynn@flynndev.us"/>
                             </Col>
                             <Col md={9}>
                                 <div className="achievements">
@@ -109,5 +91,23 @@ export default class Home extends Component<HomeProps, State> {
                 </Container>
             </div>
         );
+    }
+
+    private getProjects() {
+        this.projectService.retrieveItems().then(projects => {
+            this.setState({projects});
+        })
+    }
+
+    private getSkills() {
+        this.skillService.retrieveItems().then(skills => {
+            this.setState({skills});
+        })
+    }
+
+    private getResume() {
+        this.resumeService.retrieveItems().then(resume => {
+            this.setState({resume});
+        })
     }
 }

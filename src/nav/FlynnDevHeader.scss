@@ -1,10 +1,11 @@
 @import "../config";
 
 #brand {
-  font-family: "coquette",fantasy;
-  font-weight:bold;
-  color:$blue;
+  font-family: "coquette", fantasy;
+  font-weight: bold;
+  color: $blue;
   font-size: 24px;
+
   &:hover {
     color: $darker-blue;
   }

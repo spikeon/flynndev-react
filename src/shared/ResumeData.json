@@ -1,84 +1,84 @@
 [
   {
-    "position" : "Software Engineer III",
-    "start_date" : "10/2017",
-    "end_date" : "10/2020",
-    "company" : {
-      "name" : "Quintron",
-      "city" : "Santa Maria",
-      "state" : "CA"
+    "position": "Software Engineer III",
+    "start_date": "10/2017",
+    "end_date": "10/2020",
+    "company": {
+      "name": "Quintron",
+      "city": "Santa Maria",
+      "state": "CA"
     },
-    "duties" : [
+    "duties": [
       "Designed custom Web Based applications for internal company use using Java,Node.js, HTML5, CSS3, SASS, JavaScript (jQuery), PHP, Express, and Angular that greatly sped up development and maintenance tasks",
       "Wrote advanced Bash scripts to create installer packages for large server applications with a variety of configuration options.",
       "Worked extensively in Ubuntu, CentOS, and RedHat Server and workstation environments",
       "Lead a team of Software Engineers working to create a Web Application in Vaadin and Java",
       "Worked with customers in a maintenance capacity to diagnose and repair their systems, which included multiple servers in MySQL Cluster and dozens to hundreds of small workstations all running different components of our software."
     ],
-    "accomplishments" : [
+    "accomplishments": [
       "Designed and Implemented a new database interface solution using Java that streamlined the database access in the main system and greatly improved code readability and ease of development.",
       "Came up with the idea for, Pitched, Architected, and Lead a team of 5 Software Engineers to create a large Web Application using Vaadin and Java 8 to replace a decades old Java desktop application system management tool.",
       "Created a system in that Web Application that would build table-based editors in Vaadin for MySQL tables by reading the table’s meta-data to determine the columns and column types, which also allowed for many layers of User Customization, such as stored column reordering, re-sizing, visibility, and renaming.  The editor’s cells would allow only valid input and display dropdowns for enums and foreign key columns.  They also included print and export functionality which would use either Print CSS to print the customized table data or export it as a CSV"
     ]
   },
   {
-    "position" : "Full Stack Web Developer",
-    "start_date" : "12/2015",
-    "end_date" : "09/2016",
-    "company" : {
-      "name" : "5 Pints Productions",
-      "city" : "Phoenix",
-      "state" : "AZ"
+    "position": "Full Stack Web Developer",
+    "start_date": "12/2015",
+    "end_date": "09/2016",
+    "company": {
+      "name": "5 Pints Productions",
+      "city": "Phoenix",
+      "state": "AZ"
     },
-    "duties" : [
+    "duties": [
       "Architected and designed custom Web Based applications for clients after meeting with them to determine what their needs were using PHP, MySQL, HTML5, CSS3, and JavaScript (jQuery)",
       "Updated and maintained existing Web Sites and Web Applications using PHP, MySQL, WordPress, HTML5, CSS3, and JavaScript(jQuery)",
       "Translation of Designer created Photoshop files into handwritten WordPress templates, using: HTML5, CSS3, PHP, WordPress Themes and JavaScript"
     ],
-    "accomplishments" : []
+    "accomplishments": []
   },
   {
-    "position" : "Lead UI Developer & Shareholder",
-    "start_date" : "05/2012",
-    "end_date" : "02/2016",
-    "company" : {
-      "name" : "ClearCode Partners LLC",
-      "city" : "Portland",
-      "state" : "ME"
+    "position": "Lead UI Developer & Shareholder",
+    "start_date": "05/2012",
+    "end_date": "02/2016",
+    "company": {
+      "name": "ClearCode Partners LLC",
+      "city": "Portland",
+      "state": "ME"
     },
-    "duties" : [
+    "duties": [
       "Architected and designed custom Web Based applications for clients after meeting with them to determine what their needs were using PHP, MySQL, HTML5, CSS3, and JavaScript (jQuery)",
       "Updated and maintained existing Web Sites and Web Applications using PHP, MySQL, WordPress, HTML5, CSS3, and JavaScript(jQuery)",
       "Translation of Designer created Photoshop files into handwritten WordPress templates, using: HTML5, CSS3, PHP, WordPress Themes and JavaScript"
     ],
-    "accomplishments" : []
+    "accomplishments": []
   },
   {
-    "position" : "Full Stack LAMP Developer - Remote",
-    "start_date" : "01/2019",
-    "end_date" : "12/2012",
-    "company" : {
-      "name" : "eMedia Studios",
-      "city" : "Gold Coast",
-      "state" : "Australia"
+    "position": "Full Stack LAMP Developer - Remote",
+    "start_date": "01/2019",
+    "end_date": "12/2012",
+    "company": {
+      "name": "eMedia Studios",
+      "city": "Gold Coast",
+      "state": "Australia"
     },
-    "duties" : [
+    "duties": [
       "Architected and designed custom Web Based applications for clients after meeting with them to determine what their needs were using PHP, MySQL, HTML5, CSS3, and JavaScript (jQuery)",
       "Updated and maintained existing Web Sites and Web Applications using PHP, MySQL, WordPress, HTML5, CSS3, and JavaScript(jQuery)",
       "Translation of Designer created Photoshop files into handwritten WordPress templates, using: HTML5, CSS3, PHP, WordPress Themes and JavaScript"
     ],
-    "accomplishments" : []
+    "accomplishments": []
   },
   {
-    "position" : "Full Stack Web Developer",
-    "start_date" : "06/2006",
-    "end_date" : "02/2016",
-    "company" : {
-      "name" : "Freelance",
-      "city" : "Auburn",
-      "state" : "ME"
+    "position": "Full Stack Web Developer",
+    "start_date": "06/2006",
+    "end_date": "02/2016",
+    "company": {
+      "name": "Freelance",
+      "city": "Auburn",
+      "state": "ME"
     },
-    "duties" : [],
-    "accomplishments" : []
+    "duties": [],
+    "accomplishments": []
   }
 ]

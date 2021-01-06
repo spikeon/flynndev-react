@@ -32,42 +32,27 @@ export default class Project extends React.Component<RouteComponentProps<Project
         this.getProject();
     }
 
-    private getProject() {
-        if (this.state.projectId === "") return;
-        this.projectService.getItem(this.state.projectId).then(project => {
-            this.setState({project});
-        })
-    }
-
-    private getExternalLink(href: string | undefined | null, text: JSX.Element | string): string | JSX.Element {
-        if (!href) return "";
-        return <a target="_blank" rel="noreferrer" href={href} key={href}>{text}</a>
-    }
-
-    private getExternalButton(href: string | undefined | null, text: JSX.Element | string): string | JSX.Element {
-        return this.getExternalLink(href, <Button>{text}</Button>);
-    }
-
     render() {
         if (this.state.project === null) return (<Container></Container>);
         const project = this.state.project;
 
-        const thumb = project.thumb !== "" ? <ProjectThumb size={100} src={project.thumb} name={project.name} id={project.id}/> : "";
+        const thumb = project.thumb !== "" ?
+            <ProjectThumb size={100} src={project.thumb} name={project.name} id={project.id}/> : "";
         const title = <h2>{project.name}</h2>;
         const links = [
-            this.getExternalButton(project.github,    "GitHub"),
-            this.getExternalButton(project.apidoc,    "APIdoc"),
-            this.getExternalButton(project.url,       "Live"),
-            this.getExternalButton(project.npm,       "NPM"),
-            this.getExternalButton(project.wordpress, "WordPress")
+            this.ExternalButton(project.github, "GitHub"),
+            this.ExternalButton(project.apidoc, "APIdoc"),
+            this.ExternalButton(project.url, "Live"),
+            this.ExternalButton(project.npm, "NPM"),
+            this.ExternalButton(project.wordpress, "WordPress")
         ];
 
         let defaultActive = "";
-        const tabs : JSX.Element[] = [];
+        const tabs: JSX.Element[] = [];
 
-        const makeTab = (key : string, title : string, show: boolean, content: JSX.Element[] | JSX.Element | string) => {
-            if(!show) return "";
-            if(defaultActive === "") defaultActive = key;
+        const makeTab = (key: string, title: string, show: boolean, content: JSX.Element[] | JSX.Element | string) => {
+            if (!show) return "";
+            if (defaultActive === "") defaultActive = key;
 
             tabs.push(<Tab eventKey={key} title={title} key={key} className={key}>
                 <h2 className="tab_title">{title}</h2>
@@ -75,21 +60,22 @@ export default class Project extends React.Component<RouteComponentProps<Project
             </Tab>);
         }
 
-        makeTab("about", "About", project.about !== "", project.about ? parse(project.about, { trim: true }) : "");
-        makeTab("readme", "Readme", project.readme !== "", project.readme ? parse(project.readme, { trim: true }) : "");
+        makeTab("about", "About", project.about !== "", project.about ? parse(project.about, {trim: true}) : "");
+        makeTab("readme", "Readme", project.readme !== "", project.readme ? parse(project.readme, {trim: true}) : "");
 
 
-        let jumbotron : JSX.Element | string = "";
-        if(project.gallery.length > 0) {
-            jumbotron = <Jumbotron>
-                <Container>
-                    <Gallery images={project.gallery}/>
-                </Container>
-            </Jumbotron>;
+        let jumbotron: JSX.Element | string = "";
+        if (project.gallery.length > 0) {
+            jumbotron =
+                <Jumbotron>
+                    <Container>
+                        <Gallery images={project.gallery}/>
+                    </Container>
+                </Jumbotron>;
         }
 
-        let files : string | JSX.Element = "";
-        if(project.files.length > 1){
+        let files: string | JSX.Element = "";
+        if (project.files.length > 1) {
             files =
                 <Jumbotron>
                     <Container>
@@ -117,5 +103,25 @@ export default class Project extends React.Component<RouteComponentProps<Project
             </Container>,
             files
         ]);
+    }
+
+    private getProject() {
+        if (this.state.projectId === "") return;
+        this.projectService.getItem(this.state.projectId).then(project => {
+            this.setState({project});
+        })
+    }
+
+    private ExternalLink(href: string | undefined | null, text: JSX.Element | string): string | JSX.Element {
+        if (!href) return "";
+        return (
+            <a target="_blank" rel="noreferrer" href={href} key={href}>
+                {text}
+            </a>
+        );
+    }
+
+    private ExternalButton(href: string | undefined | null, text: JSX.Element | string): string | JSX.Element {
+        return this.ExternalLink(href, <Button>{text}</Button>);
     }
 }

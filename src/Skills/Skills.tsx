@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import './Skills.scss';
-import {Container} from "react-bootstrap";
 import Skill from "./Skill";
 import {SkillModel} from "../shared/SkillModel";
 
