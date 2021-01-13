@@ -9,11 +9,15 @@
       "state": "CA"
     },
     "duties": [
-      "Designed custom Web Based applications for internal company use using Java,Node.js, HTML5, CSS3, SASS, JavaScript (jQuery), PHP, Express, and Angular that greatly sped up development and maintenance tasks",
+      "Designed custom Web Based applications for internal company use using Java,Node.js, HTML5, CSS3, SASS, JavaScript (jQuery), PHP, Express, React, and Angular that greatly sped up development and maintenance tasks",
       "Wrote advanced Bash scripts to create installer packages for large server applications with a variety of configuration options.",
+      "Maintained the Production Environment code base in Java for multiple projects; a VoIP system backend and it’s Administration Tool, as well as several others.",
       "Worked extensively in Ubuntu, CentOS, and RedHat Server and workstation environments",
       "Lead a team of Software Engineers working to create a Web Application in Vaadin and Java",
-      "Worked with customers in a maintenance capacity to diagnose and repair their systems, which included multiple servers in MySQL Cluster and dozens to hundreds of small workstations all running different components of our software."
+      "Worked with customers in a maintenance capacity to diagnose and repair their systems, which included multiple servers in MySQL Cluster and dozens to hundreds of small workstations all running different components of our software.",
+      "Worked in an Agile environment using JIRA",
+      "Wrote and maintained Java jUnit Tests for Unit Testing",
+      "Setup and Maintained several GIT repositories for Version Control on an in-house BitBucket Server"
     ],
     "accomplishments": [
       "Designed and Implemented a new database interface solution using Java that streamlined the database access in the main system and greatly improved code readability and ease of development.",
