@@ -1,23 +1,40 @@
 @import 'config';
 @import "~bootstrap/scss/bootstrap";
 @import url("https://use.typekit.net/bev5ids.css");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400&display=swap');
 
 body {
   padding-top: 70px;
   @media only screen and (max-width: 480px) {
     padding-bottom: 50px;
   }
-  font-family: "serenity", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 16px;
+  background: $background;
+  color: $foreground;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "serenity", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 600;
 
   * {
-    font-family: "serenity", sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 16px;
     font-weight: normal;
+  }
+}
+
+
+.splash_outer {
+  position: relative;
+  z-index: -2;
+
+  .splash {
+    width: 1500px;
+    height: auto;
+    position: absolute;
+    top: -350px;
+    right: -600px;
   }
 }

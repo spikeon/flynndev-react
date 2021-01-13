@@ -11,10 +11,15 @@ import config from "./config";
 import FlynnDevHeader from "./nav/FlynnDevHeader";
 import Projects from "./Projects/Projects";
 import Project from "./Project/Project";
+import splash from "./img/Vector300.png";
+import {Container} from "react-bootstrap";
 
 const App = () => (
     <Router>
         <Analytics id={config.GA_TRACKING_ID}>
+            <Container className="splash_outer">
+                <img src={splash} className="splash" />
+            </Container>
             <FlynnDevHeader/>
             <Switch>
                 <Route path="/projects" component={Projects}/>

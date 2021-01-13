@@ -1,8 +1,13 @@
-$blue: #337ab7;
+$background: #121212;
+$foreground: #ffffff;
+$subBackground: #1F1F1F;
+
+$blue: #237CB8;
+$pink: #8F227D;
+
 $darker-blue: #286090;
 $green: #42A948;
 $red: #a94442;
-
 
 @mixin img-fill() {
   display: flex;
