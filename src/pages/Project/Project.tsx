@@ -95,7 +95,7 @@ export default class Project extends React.Component<RouteComponentProps<Project
             </Container>,
             jumbotron,
             <Container>
-                <div className={tabs.length == 1 ? "hide_tabs" : ""}>
+                <div className={tabs.length === 1 ? "hide_tabs" : ""}>
                     <Tabs defaultActiveKey={defaultActive}>
                         {tabs}
                     </Tabs>
