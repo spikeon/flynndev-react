@@ -1,16 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import Home from './Home/Home';
+import Home from './pages/Home/Home';
 import reportWebVitals from './reportWebVitals';
 
 // @ts-ignore
 import Analytics from 'react-router-ga';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import config from "./config";
-import FlynnDevHeader from "./nav/FlynnDevHeader";
-import Projects from "./Projects/Projects";
-import Project from "./Project/Project";
+import FlynnDevHeader from "./components/nav/FlynnDevHeader";
+import Projects from "./pages/Projects/Projects";
+import Project from "./pages/Project/Project";
 
 const App = () => (
     <Router>
